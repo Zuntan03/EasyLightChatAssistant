@@ -15,17 +15,18 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 	- ダウンロードして利用するファイルに問題がなければ `y` を入力します。
 1. プログラム起動用の `EasyLightChatAssistant-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。
+	- 量子化レベルのビット数を `q3` から `q4`, `q6`, `q8` に上げると、必要メモリが増えて動作も遅くなりますが、精度が高くなります。
+		- 参考情報: [llama.cpp：複雑化する量子化バリエーションの整理](https://sc-bakushu.hatenablog.com/entry/2024/02/26/062547#%E8%BF%BD%E8%A8%98KL-divergence-%E3%81%AB%E3%82%88%E3%82%8B%E9%87%8F%E5%AD%90%E5%8C%96%E8%A9%95%E4%BE%A1)
+	- GPU レイヤー数を上げると動作が早くなります。
 	- **VRAM 12GB なら `iq4xs_imatrix_L25` (速度重視なら `iq3xxs_imatrix_L33`)、6GB~8GBなら `iq3xxs_imatrix_L11`、4GB以下なら `iq3xxs_imatrix_L0` を実行します。**
-		- GPU レイヤー数を上げると動作が早くなります。
-		- 量子化レベルのビット数を `q3` から `q4`, `q6`, `q8` に上げると、必要メモリが増えて動作も遅くなりますが、精度が高くなります。
-		- VRAM が 16GB 以上なら 33レイヤーの `iq4xs_imatrix_L33` と、q のより高いものと比較できると良さそうです。
-			- 参考情報: [llama.cpp：複雑化する量子化バリエーションの整理](https://sc-bakushu.hatenablog.com/entry/2024/02/26/062547#%E8%BF%BD%E8%A8%98KL-divergence-%E3%81%AB%E3%82%88%E3%82%8B%E9%87%8F%E5%AD%90%E5%8C%96%E8%A9%95%E4%BE%A1)
+		- VRAM 12GB 未満で品質を重視するなら `iq4xs_imatrix_L0` も選択肢です。
+		- VRAM が 16GB 以上なら `iq4xs_imatrix_L33` から q のより高いものと比較できると良さそうです。
 	- `Windows セキュリティ` のネットワークへのアクセス許可は `キャンセル` でも動作します。
 1. Web ブラウザに `Kobold AI Lite` が表示されましたら、画面上部の `Settings` から KoboldCpp の初期設定をします。
 	- `Max Ctx. Tokens`: `32768`
 	- `Amount to Gen.`: `512`
 	- `Instruct Tag Preset`: `Llama 2 Chat`  
-	返答が英語になってしまう現象が `Vicuna` で軽減された方もいるようです。  
+	返答が英語になってしまう現象が `Instruct Tag Preset` を `Vicuna` にすると軽減された方もいるようです。  
 	![](./img/Settings.png)
 
 ## Instruct モードでお試し
@@ -95,7 +96,6 @@ KoboldCpp には様々なモードがありますが、今回は Instruct モー
 	- [Kobold.cppで小説っぽいのを作る](https://w.atwiki.jp/localmlhub/pages/19.html)
 	- [Memory, Author's Note and World Info](https://github.com/KoboldAI/KoboldAI-Client/wiki/Memory,-Author's-Note-and-World-Info)
 	- 32K コンテキストで長い文章を利用できるため、雑に書き連ねた文章を直接編集で方向性を正しながら続きを生成することもできます。
-
 
 ## ライセンス
 
