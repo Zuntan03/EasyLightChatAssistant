@@ -25,10 +25,10 @@ if not exist koboldcpp.exe (
 	popd & pause & exit /b 1
 )
 
-call :MAKE_BAT iq3xxs 0
-call :MAKE_BAT iq3xxs 11
-call :MAKE_BAT iq3xxs 22
-call :MAKE_BAT iq3xxs 33
+call :MAKE_BAT iq3xxs_imatrix 0
+call :MAKE_BAT iq3xxs_imatrix 11
+call :MAKE_BAT iq3xxs_imatrix 22
+call :MAKE_BAT iq3xxs_imatrix 33
 call :MAKE_BAT q4_k_m 0
 call :MAKE_BAT q4_k_m 24
 call :MAKE_BAT q4_k_m 33
