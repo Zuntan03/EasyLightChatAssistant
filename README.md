@@ -91,6 +91,8 @@ KoboldCpp には様々なモードがありますが、今回は Instruct モー
 	- [Memory, Author's Note and World Info](https://github.com/KoboldAI/KoboldAI-Client/wiki/Memory,-Author's-Note-and-World-Info)
 	- ただし、KoboldCpp には短い文章しか生成できなかった頃のための機能もあります。  
 	32K コンテキストで長い文章を利用できるため、設定も含めて雑に書き連ねた文章から続きを生成することもできます。
+- 文章の生成時に最後の中途半端な文は削除されます。
+	- `Settings` の `Advanced` にある `Trim Sentences` を無効にすると、最後の中途半端な文が削除されなくなります。
 
 ## ライセンス
 
