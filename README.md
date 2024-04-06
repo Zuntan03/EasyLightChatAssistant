@@ -23,6 +23,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 	- `Max Ctx. Tokens`: `32768`
 	- `Amount to Gen.`: `512`
 	- `Instruct Tag Preset`: `Llama 2 Chat`  
+	返答が英語になってしまう現象が `Vicuna` で軽減された方もいるようです。  
 	![](./img/Settings.png)
 
 ## Instruct モードでお試し
@@ -36,10 +37,10 @@ KoboldCpp には様々なモードがありますが、今回は Instruct モー
 
 1. **右下の `Submit` ボタンの上にある `Allow Editing` を有効にします。**
 1. **出力欄を直接編集**して、続きを書かせたい文章を記入します。
-	- 下の入力欄を使うと `{{[INPUT]}}` と `{{[OUTPUT]}}` が挿入され、返答が英語になります。
+	- 下の入力欄を使うと `{{[INPUT]}}` と `{{[OUTPUT]}}` が挿入され、返答が英語になりがちです。
 1. 右下の `Generate More` で続きの文章が生成されます。
 
-**`{{[INPUT]}}` と `{{[OUTPUT]}}` が残っていると返答が英語になるため、削除しています。**
+**`{{[INPUT]}}` と `{{[OUTPUT]}}` が残っていると返答が英語になりがちなため、削除しています。**
 
 ![](./img/Generate.png)
 
