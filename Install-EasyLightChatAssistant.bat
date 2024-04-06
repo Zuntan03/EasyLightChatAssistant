@@ -17,8 +17,8 @@ set /p YES_OR_NO=
 if /i not "%YES_OR_NO%" == "y" ( popd & exit /b 1 )
 
 if not exist koboldcpp.exe (
-	echo %CURL_CMD% -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.61.2/koboldcpp.exe
-	%CURL_CMD% -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.61.2/koboldcpp.exe
+	echo %CURL_CMD% -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.61.2/koboldcpp.exe --ssl-no-revoke
+	%CURL_CMD% -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.61.2/koboldcpp.exe --ssl-no-revoke
 )
 if not exist koboldcpp.exe (
 	echo "Failed to download koboldcpp.exe"
@@ -56,7 +56,7 @@ set KOBOLDCPP_ARGS=^
 
 set RUN_BAT=EasyLightChatAssistant-%QUANTIZE%_L%GPU_LAYERS%.bat
 echo @echo off>%RUN_BAT%
-echo if not exist %MODEL_FILE% ( %CURL_CMD% -LO https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF/resolve/main/%MODEL_FILE% ^)>>%RUN_BAT%
+echo if not exist %MODEL_FILE% ( %CURL_CMD% -LO https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF/resolve/main/%MODEL_FILE% --ssl-no-revoke ^)>>%RUN_BAT%
 echo koboldcpp.exe %KOBOLDCPP_ARGS%>>%RUN_BAT%
 
 exit /b 0
