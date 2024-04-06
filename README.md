@@ -22,6 +22,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 1. Web ブラウザに `Kobold AI Lite` が表示されましたら、画面上部の `Settings` から KoboldCpp の初期設定をします。
 	- `Max Ctx. Tokens`: `32768`
 	- `Amount to Gen.`: `512`
+	- `Instruct Tag Preset`: `Llama 2 Chat`  
 	![](./img/Settings.png)
 
 ## Instruct モードでお試し
@@ -37,7 +38,7 @@ KoboldCpp には様々なモードがありますが、今回は Instruct モー
 1. 出力欄を直接編集して、続きを書かせたい文章を記入します。
 1. 右下の `Generate More` で続きの文章が生成されます。
 
-**`{{[INPUT]}}`, `{{[OUTPUT]}}` や `[INST]`, `[/INST]` といった指示タグが残っていると、私の手元では返答が英語になってしまっているため、指示タグを削除しています。**
+**`{{[INPUT]}}` と `{{[OUTPUT]}}` が残っていると、私の手元では返答が英語になってしまっているため、削除しています。**
 
 ![](./img/Generate.png)
 
