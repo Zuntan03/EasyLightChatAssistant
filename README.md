@@ -87,10 +87,10 @@ KoboldCpp には様々なモードがありますが、今回は Instruct モー
 	ただし、キャラのパラメータ操作といった賢さを必要とする文章の生成は、得意ではありません。
 - KoboldCpp には他にも多数の機能があります。  
 直接 `koboldcpp.exe` を起動すれば、自由に利用できます。
+	- [KoboldCpp FAQ 和訳](https://rentry.org/rmeut8xs)
 	- [Kobold.cppで小説っぽいのを作る](https://w.atwiki.jp/localmlhub/pages/19.html)
 	- [Memory, Author's Note and World Info](https://github.com/KoboldAI/KoboldAI-Client/wiki/Memory,-Author's-Note-and-World-Info)
-	- ただし、KoboldCpp には短い文章しか生成できなかった頃のための機能もあります。  
-	32K コンテキストで長い文章を利用できるため、設定も含めて雑に書き連ねた文章から続きを生成することもできます。
+	- 32K コンテキストで長い文章を利用できるため、雑に書き連ねた文章を直接編集で方向性を正しながら続きを生成することもできます。
 - 文章の生成時に最後の中途半端な文は削除されます。
 	- `Settings` の `Advanced` にある `Trim Sentences` を無効にすると、最後の中途半端な文が削除されなくなります。
 
