@@ -11,7 +11,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 ## インストール
 
-1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=0) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
+1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=1) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 	- ダウンロードして利用するファイルに問題がなければ `y` を入力します。
 1. プログラム起動用の `EasyLightChatAssistant-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。

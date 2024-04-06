@@ -14,7 +14,7 @@ echo.
 echo "以上の URL からファイルをダウンロードして利用します（URL を Ctrl クリックで開けます）。"
 echo "よろしいですか？ [y/n]"
 set /p YES_OR_NO=
-if /i not "!YES_OR_NO!" == "y" ( popd & exit /b 1 )
+if /i not "%YES_OR_NO%" == "y" ( popd & exit /b 1 )
 
 if not exist koboldcpp.exe (
 	echo %CURL_CMD% -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.61.2/koboldcpp.exe
