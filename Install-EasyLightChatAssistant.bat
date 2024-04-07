@@ -45,6 +45,9 @@ call :MAKE_BAT Sdff-Ltba/LightChatAssistant-2x7B-GGUF 2x7B_q8 0
 call :MAKE_BAT Sdff-Ltba/LightChatAssistant-2x7B-GGUF 2x7B_q8 16
 call :MAKE_BAT Sdff-Ltba/LightChatAssistant-2x7B-GGUF 2x7B_q8 33
 
+call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_IQ4_XS 0
+call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_IQ4_XS 16
+call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_IQ4_XS 33
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 0
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 15
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 33

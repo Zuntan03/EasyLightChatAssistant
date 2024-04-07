@@ -13,6 +13,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 - 起動 bat ファイルを `Run-*.bat` にリネームしました。
 - 起動 bat ファイルを削除する `DeleteAllRunBats.bat` を追加しました。
 	- `DeleteAllRunBats.bat` と `Install-EasyLightChatAssistant.bat` を実行すると初期状態に戻せます。
+- [Aratako/LightChatAssistant-4x7B-GGUF](https://huggingface.co/Aratako/LightChatAssistant-4x7B-GGUF) の `4x7B_IQ4_XS` 対応を追加しました。
 
 ## 動作環境
 
@@ -41,6 +42,12 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 	- `Instruct Tag Preset`: `Llama 2 Chat`  
 	返答が英語になってしまう現象が `Instruct Tag Preset` を `Vicuna` にすると軽減された方もいるようです。  
 	![](./img/Settings.png)
+
+## アップデート方法
+
+1. `DeleteAllRunBats.bat` を実行して `Run-*.bat` を削除します。
+	- `DeleteAllRunBats.bat` が存在しない場合は `EasyLightChatAssistant-*.bat` を手動で削除します。
+1. 新しく [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=5) を右クリックからダウンロードして、既存のファイルを上書きして実行します。
 
 ## Instruct モードでお試し
 
