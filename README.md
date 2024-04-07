@@ -1,17 +1,26 @@
 ﻿# EasyLightChatAssistant
 
-EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語モデルの[LightChatAssistant](https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF) を、[KoboldCpp](https://github.com/LostRuins/koboldcpp) で簡単にお試しする環境です。
+EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語モデルの [LightChatAssistant](https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF) を、[KoboldCpp](https://github.com/LostRuins/koboldcpp) で簡単にお試しする環境です。
+
+## 更新履歴
+
+### 2024/04/07
+
+- 束ねる LLM を4つに増やした [Aratako/LightChatAssistant-4x7B-GGUF](https://huggingface.co/Aratako/LightChatAssistant-4x7B-GGUF) に対応しました。  
+以下の手順で更新してください。
+	1. `EasyLightChatAssistant-*.bat` を削除します。
+	1. `Install-EasyLightChatAssistant.bat` をダウンロードし直して上書きして、実行します。
 
 ## 動作環境
 
 - 最近の NVIDIA ビデオカードを積んだ Windows PC で動作します。
 	- RAM・VRAM・ストレージの必要容量は使用するモデルによります。  
-	- 最低動作環境としては RAM 16GB と VRAM 4GB 程度でも、`iq3xxs_L0` ならそこそこ動作するはずです。
+	- 最低動作環境としては RAM 16GB と VRAM 4GB 程度でも、`iq3xxs_imatrix_L0` や `iq4xs_imatrix_L0` ならそこそこ動作するはずです。
 	- KoboldCpp を直接設定すれば、Radeon や CPU でも動作するはずです。
 
 ## インストール
 
-1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=3) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
+1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=4) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 	- ダウンロードして利用するファイルに問題がなければ `y` を入力します。
 1. プログラム起動用の `EasyLightChatAssistant-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。
@@ -25,7 +34,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 1. Web ブラウザに `Kobold AI Lite` が表示されましたら、画面上部の `Settings` から KoboldCpp の初期設定をします。  
 	スライダーでなく数値入力欄を直接編集することで、スライダーの範囲を超えた値を入力できます。
 	- `Max Ctx. Tokens`: `32768`
-	- `Amount to Gen.`: `512` (`256` や `2048` などお好みで)
+	- `Amount to Gen.`: `512` (生成文の長さを `256`~`2048` などお好みで設定)
 	- `Instruct Tag Preset`: `Llama 2 Chat`  
 	返答が英語になってしまう現象が `Instruct Tag Preset` を `Vicuna` にすると軽減された方もいるようです。  
 	![](./img/Settings.png)
