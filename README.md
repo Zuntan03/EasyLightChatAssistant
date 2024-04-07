@@ -22,9 +22,10 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 		- VRAM 12GB 未満で品質を重視するなら `iq4xs_imatrix_L0` も選択肢です。
 		- VRAM が 16GB 以上なら `iq4xs_imatrix_L33` から q のより高いものと比較できると良さそうです。
 	- `Windows セキュリティ` のネットワークへのアクセス許可は `キャンセル` でも動作します。
-1. Web ブラウザに `Kobold AI Lite` が表示されましたら、画面上部の `Settings` から KoboldCpp の初期設定をします。
+1. Web ブラウザに `Kobold AI Lite` が表示されましたら、画面上部の `Settings` から KoboldCpp の初期設定をします。  
+	スライダーでなく数値入力欄を直接編集することで、スライダーの範囲を超えた値を入力できます。
 	- `Max Ctx. Tokens`: `32768`
-	- `Amount to Gen.`: `512`
+	- `Amount to Gen.`: `512` (`256` や `2048` などお好みで)
 	- `Instruct Tag Preset`: `Llama 2 Chat`  
 	返答が英語になってしまう現象が `Instruct Tag Preset` を `Vicuna` にすると軽減された方もいるようです。  
 	![](./img/Settings.png)
