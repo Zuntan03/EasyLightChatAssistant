@@ -49,8 +49,8 @@ call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 0
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 15
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 33
 
-echo @echo off>DeleteAllBats.bat
-echo del EasyLightChatAssistant-*.bat>>DeleteAllBats.bat
+echo @echo off>DeleteAllRunBats.bat
+echo del Run-*.bat>>DeleteAllRunBats.bat
 
 popd
 exit /b 0
@@ -68,7 +68,7 @@ set KOBOLDCPP_ARGS=^
 --gpulayers %GPU_LAYERS% ^
 --launch
 
-set RUN_BAT=EasyLightChatAssistant-%VARIATION%_L%GPU_LAYERS%.bat
+set RUN_BAT=Run-%VARIATION%_L%GPU_LAYERS%.bat
 echo @echo off>%RUN_BAT%
 echo if not exist %MODEL_FILE% ( %CURL_CMD% -LO https://huggingface.co/%REPO_ID%/resolve/main/%MODEL_FILE% --ssl-no-revoke ^)>>%RUN_BAT%
 echo koboldcpp.exe %KOBOLDCPP_ARGS%>>%RUN_BAT%

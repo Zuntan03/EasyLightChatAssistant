@@ -10,6 +10,9 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 以下の手順で更新してください。
 	1. `EasyLightChatAssistant-*.bat` を削除します。
 	1. `Install-EasyLightChatAssistant.bat` をダウンロードし直して上書きして、実行します。
+- 起動 bat ファイルを `Run-*.bat` にリネームしました。
+- 起動 bat ファイルを削除する `DeleteAllRunBats.bat` を追加しました。
+	- `DeleteAllRunBats.bat` と `Install-EasyLightChatAssistant.bat` を実行すると初期状態に戻せます。
 
 ## 動作環境
 
@@ -23,7 +26,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=4) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 	- ダウンロードして利用するファイルに問題がなければ `y` を入力します。
-1. プログラム起動用の `EasyLightChatAssistant-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。
+1. プログラム起動用の `Run-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。
 	- 量子化レベルのビット数を `q3` から `q4`, `q6`, `q8` に上げると、必要メモリが増えて動作も遅くなりますが、精度が高くなります。
 		- 参考情報: [llama.cpp：複雑化する量子化バリエーションの整理](https://sc-bakushu.hatenablog.com/entry/2024/02/26/062547#%E8%BF%BD%E8%A8%98KL-divergence-%E3%81%AB%E3%82%88%E3%82%8B%E9%87%8F%E5%AD%90%E5%8C%96%E8%A9%95%E4%BE%A1)
 	- GPU レイヤー数を上げると動作が早くなります。
