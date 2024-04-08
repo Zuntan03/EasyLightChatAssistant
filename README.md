@@ -49,6 +49,32 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 	- `DeleteAllRunBats.bat` が存在しない場合は `EasyLightChatAssistant-*.bat` を手動で削除します。
 1. 新しく [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=5) を右クリックからダウンロードして、既存のファイルを上書きして実行します。
 
+## `koboldcpp.exe` の直接起動
+
+`Run-*.bat` の中身は KoboldCpp で利用できる GGUF 形式のモデルファイルのダウンロードと、オプションを指定しての `koboldcpp.exe` の起動のみです。  
+`koboldcpp.exe` を直接起動してオプションを指定することで、お好みの設定で KoboldCpp を利用することができます。  
+以下は `Run-*.bat` で指定しているオプションです。
+
+- `--usecublas`: NVIDIA 製のビデオカードを利用して、動作を高速化します。
+- `--gpulayers 0~33`: ビデオカードの VRAM をどの程度使用して高速化するかを `0` から `33` の値で指定します。
+	- 増やすと高速化し、`33` では LightChatAssistant 全体を VRAM に載せようとします。  
+- `--contextsize 32768`: LightChatAssistant がサポートしている 32K コンテキストを指定しています。
+- `--model *.gguf`: GGUF 形式のモデルファイルへのパスを指定します。
+- `--launch`: Web ブラウザでページを自動的に表示します。
+
+以下の画像の赤線部分は、`koboldcpp.exe` を直接起動した際の、該当する設定箇所です。
+
+![](./img/Launcher.png)
+
+- `Presets`: 高速化手法が自動的に設定されます。
+- `GPU Layer`: 0 から動作を確認しながら増やしてください。
+- `Context Size`: `32768` を指定します。
+- `Model`: `Browse` で GGUF モデルファイルを指定します。
+- `Launch`: KoboldCpp 本体を起動して、Web ブラウザにページを表示します。
+
+`Quick Launch` 以外のタブで様々な設定を変更することができます。  
+各設定項目の内容については下の `Help` から [公式ドキュメント](https://github.com/LostRuins/koboldcpp/wiki) を確認してください。
+
 ## Instruct モードでお試し
 
 KoboldCpp には様々なモードがありますが、今回は Instruct モードで文章の続きを生成します。
