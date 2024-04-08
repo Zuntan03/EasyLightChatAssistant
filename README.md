@@ -4,6 +4,11 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 ## 更新履歴
 
+### 2024/04/08
+
+- ドキュメントに『[`koboldcpp.exe` の直接起動](https://github.com/Zuntan03/EasyLightChatAssistant#koboldcppexe-%E3%81%AE%E7%9B%B4%E6%8E%A5%E8%B5%B7%E5%8B%95)』を追加しました。
+	- KoboldCpp を様々な設定で利用できます。
+
 ### 2024/04/07
 
 - 束ねる LLM を4つに増やした [Aratako/LightChatAssistant-4x7B-GGUF](https://huggingface.co/Aratako/LightChatAssistant-4x7B-GGUF) に対応しました。  
