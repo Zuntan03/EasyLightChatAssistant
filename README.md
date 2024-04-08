@@ -22,7 +22,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 ## 動作環境
 
-- 最近の NVIDIA ビデオカードを積んだ Windows PC で動作します。
+- 最近の NVIDIA ビデオカードを積んだ Windows 10 以降の PC で動作します。
 	- RAM・VRAM・ストレージの必要容量は使用するモデルによります。  
 	- 最低動作環境としては RAM 16GB と VRAM 4GB 程度でも、`iq3xxs_imatrix_L0` や `iq4xs_imatrix_L0` ならそこそこ動作するはずです。
 	- KoboldCpp を直接設定すれば、Radeon や CPU でも動作するはずです。
