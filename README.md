@@ -4,6 +4,12 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 ## 更新履歴
 
+### 2024/04/11
+
+- [Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF](https://huggingface.co/Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF) に対応しました。
+- アップデート後に `Run-*.bat` で起動できなくなった場合は、空のフォルダで `Install-EasyLightChatAssistant.bat` を実行して再インストールしてください。
+	- KoboldCpp とモデルのバージョン相性によりますが、すべてを最新にすれば問題は発生しません。
+
 ### 2024/04/08
 
 - ドキュメントに『[`koboldcpp.exe` の直接起動](https://github.com/Zuntan03/EasyLightChatAssistant#koboldcppexe-%E3%81%AE%E7%9B%B4%E6%8E%A5%E8%B5%B7%E5%8B%95)』を追加しました。
@@ -29,7 +35,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 ## インストール
 
-1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=5) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
+1. [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=6) を右クリックからダウンロードして、インストール先のフォルダでダブルクリックして実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 	- ダウンロードして利用するファイルに問題がなければ `y` を入力します。
 1. プログラム起動用の `Run-[量子化レベル]_L[GPU レイヤー数].bat` が複数生成されますので、環境にあった bat を実行します。
@@ -52,7 +58,7 @@ EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語
 
 1. `DeleteAllRunBats.bat` を実行して `Run-*.bat` を削除します。
 	- `DeleteAllRunBats.bat` が存在しない場合は `EasyLightChatAssistant-*.bat` を手動で削除します。
-1. 新しく [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=5) を右クリックからダウンロードして、既存のファイルを上書きして実行します。
+1. 新しく [`Install-EasyLightChatAssistant.bat`](https://github.com/Zuntan03/EasyLightChatAssistant/raw/main/Install-EasyLightChatAssistant.bat?v=6) を右クリックからダウンロードして、既存のファイルを上書きして実行します。
 
 ## `koboldcpp.exe` の直接起動
 

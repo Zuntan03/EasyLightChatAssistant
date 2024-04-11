@@ -12,7 +12,8 @@ setlocal enabledelayedexpansion
 if not exist koboldcpp.exe (
 	echo https://github.com/LostRuins/koboldcpp
 	echo https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF
-	echo https://huggingface.co/Aratako/LightChatAssistant-4x7B
+	echo https://huggingface.co/Aratako/LightChatAssistant-4x7B-GGUF
+	echo https://huggingface.co/Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF
 	echo.
 	echo "以上の URL からファイルをダウンロードして利用します（URL を Ctrl クリックで開けます）。"
 	echo "よろしいですか？ [y/n]"
@@ -51,6 +52,10 @@ call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_IQ4_XS 33
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 0
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 15
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 33
+
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 0
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 24
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 33
 
 echo @echo off>DeleteAllRunBats.bat
 echo del Run-*.bat>>DeleteAllRunBats.bat
