@@ -53,9 +53,9 @@ call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 0
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 15
 call :MAKE_BAT Aratako/LightChatAssistant-4x7B-GGUF 4x7B_Q4_K_M 33
 
-call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 0
-call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 24
-call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized_Q4_K_M 33
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized-experimental_Q4_K_M 0
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized-experimental_Q4_K_M 24
+call :MAKE_BAT Aratako/LightChatAssistant-2x7B-optimized-experimental-GGUF 2x7B-optimized-experimental_Q4_K_M 33
 
 echo @echo off>DeleteAllRunBats.bat
 echo del Run-*.bat>>DeleteAllRunBats.bat
