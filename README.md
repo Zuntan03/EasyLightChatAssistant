@@ -2,6 +2,8 @@
 
 EasyLightChatAssistant は軽量で検閲や規制のないローカル日本語モデルの [LightChatAssistant](https://huggingface.co/Sdff-Ltba/LightChatAssistant-2x7B-GGUF) を、[KoboldCpp](https://github.com/LostRuins/koboldcpp) で簡単にお試しする環境です。
 
+KoboldCppに簡単なノベル生成用の UI を被せた [EasyNovelAssistant](https://github.com/Zuntan03/EasyNovelAssistant) も公開しています。
+
 ## 更新履歴
 
 ### 2024/04/11
